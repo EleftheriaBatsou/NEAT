@@ -1,0 +1,132 @@
+/* Basic Colors*/
+.light-green-color { color: #95D99B !important}
+.light-green-bg-color { background-color: #95D99B; }
+.dark-green-color { color: #4D6F50; }
+.dark-green-bg-color { background-color: #4D6F50; }
+.white-color { color: #fff; }
+
+/* Paddings and Margins */
+.padding-top-100px { padding-top: 100px; }
+.margin-bottom-25px { margin-bottom: 25px; }
+
+
+/**********************
+ *
+ * style for LOGIN
+ *
+ **********************/
+#loginContainer {
+    background-color: #4D6F50;
+    height: 100vh
+}
+
+.login-form {
+	width: auto;
+	margin: 0 auto;
+}
+
+.login-form .hint-text {
+	color: #fff;
+	text-align: center;
+    font-size: 0.8em;
+}
+
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 8px;
+}
+.login-btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.or-seperator {
+    margin: 20px 0 10px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+.or-seperator i {
+    padding: 0 10px;
+    background: #f7f7f7;
+    position: relative;
+    top: -11px;
+    z-index: 1;
+}
+.social-btn .btn {
+    margin: 10px 0;
+    font-size: 15px;
+    text-align: left; 
+    line-height: 24px;       
+}
+
+.input-group {
+    background: #4D6F50;
+    color: green;
+    border: 2px solid #95D99B;
+    border-radius: 8px;
+}
+
+.input-group input::placeholder {
+    color: #FFF;
+    text-transform: uppercase !important;
+    font-size: 1em;
+}
+
+.input-group>.custom-select:not(:first-child), 
+.input-group>.form-control:not(:first-child) {
+    color: #FFF;
+    background-color: #4D6F50;
+    text-transform: none;
+    font-size: 1em;
+    border: none;
+}
+
+.input-group-addon .fa{
+	font-size: 18px;
+    padding: 10px;
+    color: #95D99B;
+}
+
+/* overwritten some bootstrap classes. Probably there is a better way to do that... */
+.form-group {
+    margin-bottom: 1rem;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.clearfix {
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.btn-success,
+.btn-success:hover {
+    height: 42px;
+    color: #4D6F50;
+    background-color: #fff;
+    border-color: #4D6F50 !important;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/**********************
+ *
+ * common style for top and bottom navbar
+ *
+ **********************/
+.navbar {
+    height: 65px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.bottomNavbar {
+    background-color: #4D6F50;
+    color: #95D99B;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.bottomNavbar img {
+    height: 24px;
+}

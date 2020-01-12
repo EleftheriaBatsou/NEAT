@@ -1,0 +1,37 @@
+/* Paddings and Margins */
+.padding-left-12px { padding-left: 12px; }
+
+
+/**********************
+ *
+ * style for advice screen
+ *
+ **********************/
+#adviceContainer {
+    background-color: #fff;
+    height: 100%;
+}
+
+.container-fluid {
+    padding-right: unset;
+    padding-left: unset;
+    padding-bottom: 85px;
+}
+
+.topNavbar {
+    background-color: #95D99B;
+    color: #4D6F50;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.advice-bg-image {
+    margin-bottom: 30px;
+}
+
+.advice-description {
+    color: #333;
+}

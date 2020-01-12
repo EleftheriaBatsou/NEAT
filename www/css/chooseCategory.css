@@ -1,0 +1,59 @@
+/* Paddings and Margins */
+.padding-left-12px { padding-left: 12px; }
+
+
+/**********************
+ *
+ * style for ChooseCategory screen
+ *
+ **********************/
+#chooseCategoryContainer {
+    background-color: #fff;
+    height: 100vh
+}
+
+.container-fluid {
+    padding-right: unset;
+    padding-left: unset;
+}
+
+#chooseCategoryContainer .topNavbar {
+    background-color: #95D99B;
+    color: #4D6F50;
+}
+
+#chooseCategoryContainer .row {
+    margin: 0 20px;
+}
+
+#chooseCategoryContainer .card {
+    max-width: 47%;
+    background-color: #95D99B;
+    color: #333;
+    border: unset;
+    border-radius: unset;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 6%;
+}
+
+#chooseCategoryContainer .card:first-child {
+    margin-left: 0;
+}
+
+#chooseCategoryContainer .card-body {
+    padding: 12px 0;
+    color: #333;
+}
+
+.chooseCategoryImage {
+    position: absolute;
+    bottom: 65px;
+}
+
+.card-body:hover {
+    text-decoration: none;
+}

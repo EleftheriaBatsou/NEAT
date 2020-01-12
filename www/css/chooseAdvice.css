@@ -1,0 +1,69 @@
+/* Paddings and Margins */
+.padding-left-12px { padding-left: 12px; }
+
+
+/**********************
+ *
+ * style for AdviceCategory screen
+ *
+ **********************/
+#chooseAdviceContainer {
+    background-color: #333;
+    height: 100%;
+}
+
+
+.topNavbar {
+    background-color: #4d6f50;
+    color: #fff;
+}
+
+.choose-advice-list {
+    padding: 20px 20px 85px;
+}
+
+.choose-advice-list-item {
+    color: #333;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    background-color: #95d99b;
+    padding: 15px 20px;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+}
+
+.choose-advice-list-item:hover {
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+}
+
+.choose-advice-fake-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background-color: #4d6f50;
+}
+
+.choose-advice-arrow-icon {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    text-align: center;
+    color: #4d6f50;
+}
+
+.choose-advice-list-item:hover .choose-advice-arrow-icon {
+    background-color: #95d99b;
+    color: #fff;
+}
