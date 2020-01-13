@@ -38,6 +38,7 @@
     text-align: center;
     margin-top: 20px;
     margin-left: 6%;
+    z-index: 1;
 }
 
 #chooseCategoryContainer .card:first-child {
@@ -52,6 +53,7 @@
 .chooseCategoryImage {
     position: absolute;
     bottom: 65px;
+    width: 100%;
 }
 
 .card-body:hover {
