@@ -1,0 +1,40 @@
+/* Paddings and Margins */
+.padding-left-12px { padding-left: 12px; }
+.width45 { width: 45%; }
+.width55 { width: 55%; }
+
+
+/**********************
+ *
+ * style for Completion Rate screen
+ *
+ **********************/
+#completionRateContainer {
+    height: 100%;
+}
+
+
+.topNavbar {
+    background-color: #4d6f50;
+    color: #fff;
+}
+
+.container-fluid {
+    padding-right: unset;
+    padding-left: unset;
+}
+
+.completionRateImage {
+    position: absolute;
+    bottom: 80px;
+}
+
+.completionRateImagePercentage {
+    position: absolute;
+    top: 120px;
+    width: 170px;
+    margin-left: 30%;
+    margin-right: 30%;  
+}
+
+

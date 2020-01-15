@@ -1,0 +1,104 @@
+/* Paddings and Margins */
+.padding-left-12px { padding-left: 12px; }
+.width45 { width: 45%; }
+.width55 { width: 55%; }
+
+
+/**********************
+ *
+ * style for Profile screen
+ *
+ **********************/
+#profileContainer {
+    height: 100%;
+}
+
+
+.topNavbar {
+    background-color: #4d6f50;
+    color: #fff;
+}
+
+.profile-list {
+    padding: 20px 20px 85px;
+    text-transform: uppercase;
+}
+
+.profile-item {
+    color: #333;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    background-color: #95d99b;
+    padding: 15px 20px;
+    position: relative;
+    margin-bottom: 7px;
+}
+
+.profile-item:hover {
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+}
+
+.choose-advice-fake-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background-color: #4d6f50;
+}
+
+.choose-advice-arrow-icon {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    text-align: center;
+    color: #4d6f50;
+}
+
+.profile-item:hover .choose-advice-arrow-icon {
+    background-color: #95d99b;
+    color: #fff;
+}
+
+.profile-item img {
+    height: 24px;
+    min-width: 20px;
+}
+
+/* About Card */
+#profileContainer .card {
+    background-color: #95D99B;
+    color: #fff;
+    border: unset;
+    border-radius: unset;
+    text-align: left;
+    font-size: 0.8em; 
+}
+
+#profileContainer .text-on-card {
+    font-size: 1.1em;
+    margin-top: 40px;
+    padding-left: 20px;  
+}
+
+.rectangular {
+    width: 130px;
+    height: 30px;
+    text-align: right;
+    border: 2px solid #fff;
+    margin-left: 48px;
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
