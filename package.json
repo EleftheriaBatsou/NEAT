@@ -11,5 +11,14 @@
         "ecosystem:cordova"
     ],
     "author": "Apache Cordova Team",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0",
+    "dependencies": {
+        "mysql": "github:mysqljs/mysql",
+        "nodejs-mobile-cordova": "^0.3.4"
+    },
+    "cordova": {
+        "plugins": {
+            "nodejs-mobile-cordova": {}
+        }
+    }
 }
