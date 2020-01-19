@@ -31,3 +31,29 @@ request.open("GET","https://neatecologicalapp.000webhostapp.com/createuser.php?u
 request.send();
 
 }
+
+function signButton_click(){
+    //window.alert("YESSSS");
+    
+var username = document.getElementById("signusername").value.toString();
+var password= document.getElementById("signpassword").value.toString();
+//window.alert(username+"  "+password);
+
+var request = new XMLHttpRequest();
+request.onreadystatechange= function(){
+   if (this.readyState === 4 && this.status === 200){
+       msg=this.responseText;
+       if(msg == 1){
+           window.location.href="profile.html";
+       }
+       else{
+           window.alert("User not found...");
+       }
+   }
+};
+
+request.open("GET","https://neatecologicalapp.000webhostapp.com/login.php?username="+username+'&password='+password,true);
+request.send();
+    
+
+}
