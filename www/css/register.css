@@ -1,0 +1,35 @@
+/**********************
+ *
+ * style for register
+ *
+ **********************/
+#registerContainer {
+    background-color: #4D6F50;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.register-form {
+	width: auto;
+	margin: 0 auto;
+}
+
+.register-form .hint-text {
+	color: #fff;
+	text-align: center;
+    font-size: 0.8em;
+}
+
+.register-btn {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #fff;
+    padding: 0 55px;
+}
+
+.btn-success:not(:disabled):not(.disabled):active {
+    background-color: #fff;
+}

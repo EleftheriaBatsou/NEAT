@@ -17,11 +17,6 @@
     padding-left: unset;
 }
 
-#chooseCategoryContainer .topNavbar {
-    background-color: #95D99B;
-    color: #4D6F50;
-}
-
 #chooseCategoryContainer .row {
     margin: 0 20px;
 }
@@ -58,4 +53,8 @@
 
 .card-body:hover {
     text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #4d6f50;
 }

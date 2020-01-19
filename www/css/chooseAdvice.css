@@ -9,7 +9,7 @@
  **********************/
 #chooseAdviceContainer {
     background-color: #333;
-    height: 100%;
+    height: 100vh;
 }
 
 
@@ -65,5 +65,9 @@
 
 .choose-advice-list-item:hover .choose-advice-arrow-icon {
     background-color: #95d99b;
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
     color: #fff;
 }

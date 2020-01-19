@@ -36,3 +36,7 @@
 .advice-description {
     color: #333;
 }
+
+.navbar-light .navbar-nav .nav-link {
+    color: #4d6f50;
+}
