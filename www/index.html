@@ -15,6 +15,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     	<link rel="stylesheet" type="text/css" href="css/style.css">
+        
+        
     </head>
     <body>
     	<div id="loginContainer">
@@ -30,18 +32,17 @@ and open the template in the editor.
 			        <div class="form-group">
 			        	<div class="input-group">
 			                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-			                <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+			                <input type="text" class="form-control" id="signusername" name="signusername" placeholder="Username" required="required">
 			            </div>
 			        </div>
 					<div class="form-group">
 			            <div class="input-group">
 			                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-			                <input type="password" class="form-control" name="password" placeholder=" *********" required="required">
+			                <input type="password" class="form-control" id="signpassword" name="signpassword" placeholder=" *********" required="required">
 			            </div>
 			        </div>        
 			        <div class="form-group">
-			            <button type="submit" class="btn btn-success btn-block login-btn">
-			            	<a href="chooseCategory.html" class="light-green-color">Sign in</a>
+			            <button type="button" class="btn btn-success btn-block login-btn" onclick="signButton_click()" id="signButton">Sign in
 			        	</button>
 			            	
 			        </div>
@@ -60,12 +61,12 @@ and open the template in the editor.
 			        </div>  
 	        		-->
 	    		</form>
-				<div class="hint-text">Don't have an account? <a href="register.html" class="text-success light-green-color">Register Now!</a></div>
+				<div class="hint-text">Don't have an account? <a href="#" class="text-success light-green-color">Register Now!</a></div>
 			</div>
 		</div>
 
-        <!--connection -->
-        <script src="js/dbConnection.js" type="text/javascript"></script>
+        <!--index js-->
+        <script src="js/index.js" type="text/javascript"></script>
         <!-- jQuery, Popper JS and Bootstrap JS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
