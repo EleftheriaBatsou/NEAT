@@ -10,7 +10,7 @@
  *
  **********************/
 #completionRateContainer {
-    height: 100%;
+    min-height: 100vh;
 }
 
 .topNavbar {
@@ -23,20 +23,42 @@
     padding-left: unset;
 }
 
+.completion-container {
+    width: 100%;
+}
+
 .completionRateImage {
-    position: absolute;
-    bottom: 80px;
+    position: relative;
+    margin-top: -150px;
     z-index: -1;
+    width: 100%;
 }
 
 .completionRateImagePercentage {
-    position: absolute;
-    top: 120px;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 170px;
-    margin-left: 30%;
-    margin-right: 30%;  
+    height: 170px;
+    border: 8px solid #95d99b;
+    border-radius: 50%;
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
+}
+
+.completion-rate-percentage-text {
+    position: relative;
+    font-size: 53px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4d6f50;
+    margin-left: 15px;
+}
+
+.completion-rate-percentage-symbol {
+    font-size: 30px;
 }

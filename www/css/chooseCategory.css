@@ -9,7 +9,7 @@
  **********************/
 #chooseCategoryContainer {
     background-color: #fff;
-    height: 100vh
+    min-height: calc(100vh - 65px);
 }
 
 .container-fluid {
@@ -46,7 +46,7 @@
 }
 
 .chooseCategoryImage {
-    position: absolute;
+    position: fixed;
     bottom: 65px;
     width: 100%;
 }

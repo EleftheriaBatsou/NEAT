@@ -25,6 +25,10 @@
     font-weight: bold;
 }
 
+.register-btn.disabled {
+    pointer-events: none;
+}
+
 .error-message {
     color: #fff;
     padding: 0 55px;
