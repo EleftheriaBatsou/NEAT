@@ -10,20 +10,57 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<script src="js/index.js" type="text/javascript"></script>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     	<link rel="stylesheet" type="text/css" href="css/style.css">
     	<link rel="stylesheet" type="text/css" href="css/chooseAdvice.css">
+        
+        <script>
+            function loaddatasets(){
+                var param = window.localStorage.getItem('categ');
+                
+               
+
+   
+/*
+    var request = new XMLHttpRequest();
+    request.onreadystatechange= function(){
+       if (this.readyState === 4 && this.status === 200){
+           msg=this.responseText;
+           if(msg ){
+               var right =  document.getElementById('righthere');
+              var arrayresp = msg.toString().split('|');
+              //for(i=0;i<arrayresp.length;i++){}
+              node = document.createElement("a");
+              node2 = document.createTextNode(arrayresp[1].toString());
+              node.className='choose-advice-list-item';
+              node.appendChild(node2);
+              right.appendChild(node);
+               
+           }
+           else{
+               window.alert("Δεν βρέθηκαν συμβουλές...");
+           }
+       }
+    };
+
+    request.open("GET","https://neatecologicalapp.000webhostapp.com/fetchheader.php?param="+param,true);
+    request.send();
+}
+     */           
+            
+        </script>
+        
     </head>
-    <body>
+    <body onload="loaddatasets()">
     	<div id="chooseAdviceContainer">
     		<!-- Navbar -->
 			<nav class="navbar navbar-expand-lg navbar-light topNavbar">
 				<span>
 					<a href="chooseCategory.html" class="white-color"><i class="fa fa-arrow-left"></i></a>
-					<span style="font-weight: bold" class="padding-left-12px white-color">Marianna</span>
+					<span id="usernameCategory" style="font-weight: bold" class="padding-left-12px white-color">Marianna</span>
 				</span>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -32,7 +69,7 @@ and open the template in the editor.
 					<div class="navbar-nav">
 						<a class="nav-item nav-link" href="chooseCategory.html">Home</a>
 						<a class="nav-item nav-link" href="profile.html">Profile</a>
-						<a class="nav-item nav-link" href="index.html">Sign out</a>
+						<a onclick="signout()" class="nav-item nav-link" href="index.html">Sign out</a>
 					</div>
 				</div>
 			</nav>
@@ -40,7 +77,14 @@ and open the template in the editor.
         	<!-- Choose advice -->
 			<div class="container-fluid">
 				<div class="row">
-					<div class="choose-advice-list col-12">
+					<div id="righthere" class="choose-advice-list col-12">
+						<a class="choose-advice-list-item" href="advice.html">
+							<span class="choose-advice-fake-icon"></span>
+							<span>Lorem ipsum</span>
+							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
+						</a>
+                                            
+                                            
 						<a class="choose-advice-list-item" href="advice.html">
 							<span class="choose-advice-fake-icon"></span>
 							<span>Lorem ipsum</span>
@@ -76,11 +120,8 @@ and open the template in the editor.
 							<span>Lorem ipsum</span>
 							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
 						</a>
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
+                                            
+                                            
 					</div>
 				</div>
 			</div>
@@ -101,5 +142,9 @@ and open the template in the editor.
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	</body>
+<script>
+                    document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
+                </script>	
+    
+    </body>
 </html>

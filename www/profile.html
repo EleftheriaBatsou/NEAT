@@ -9,7 +9,7 @@ and open the template in the editor.
         <title>Profile</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<script src="js/index.js" type="text/javascript"></script>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,7 +22,7 @@ and open the template in the editor.
 			<nav class="navbar navbar-expand-lg navbar-light topNavbar">
 				<span>
 					<a href="chooseCategory.html" class="white-color"><i class="fa fa-arrow-left"></i></a>
-					<span style="font-weight: bold" class="padding-left-12px white-color">Marianna</span>
+					<span id="usernameCategory" style="font-weight: bold" class="padding-left-12px white-color"></span>
 				</span>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@ and open the template in the editor.
 					<div class="navbar-nav">
 						<a class="nav-item nav-link" href="chooseCategory.html">Home</a>
 						<a class="nav-item nav-link active" href="profile.html">Profile</a>
-						<a class="nav-item nav-link" href="index.html">Sign out</a>
+						<a onclick="signout()" class="nav-item nav-link" href="index.html">Sign out</a>
 					</div>
 				</div>
 			</nav>
@@ -46,19 +46,16 @@ and open the template in the editor.
 					<div class="card width55 text-on-card">
 						<div>
 							<span class="dark-green-color"><i class="fa fa-user"></i></span>
-							<span style="font-size: 1.3em">Marianna</span>
+							<span id="profileUsername" style="font-size: 1.3em"></span>
 						</div>
 				    	<div>
 				    		<span class="dark-green-color"><i class="fa fa-envelope"></i></span>
-			    			<span class="white-color">marianna@site.com</span>
+			    			<span id="profileEmail" class="white-color"></span>
 				    	</div>
-				    	<div>
-				    		<span class="dark-green-color"><i class="fa fa-globe"></i></span>
-				    		<span>www.marianna.com</span>
-				    	</div>
+				    	
 				    	<div class="rectangular">
-				    		<span><i class="fa fa-cog"></i></span>
-				    		<span>my fingerprint</span>
+				    		<span><i class="fa fa-cog"></i>my fingerprint</span>
+                                                <span id="profilepoints"></span>/100 to <span id="profilelevel"></span>
 				    	</div>
 					</div>
 				</div>
@@ -110,5 +107,13 @@ and open the template in the editor.
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	</body>
+<script>
+                    document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
+                document.getElementById("profileUsername").innerHTML=window.localStorage.getItem('username');
+                document.getElementById("profileEmail").innerHTML= window.localStorage.getItem('email');
+                document.getElementById("profilepoints").innerHTML= window.localStorage.getItem('points');
+                document.getElementById("profilelevel").innerHTML = parseInt(window.localStorage.getItem('levels'))+1;
+
+</script>	
+    </body>
 </html>
