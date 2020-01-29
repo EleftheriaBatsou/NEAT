@@ -62,7 +62,8 @@ function signButton_click(){
        if (this.readyState === 4 && this.status === 200){
            msg=this.responseText;
            if(msg == 1){
-               window.location.href="profile.html";
+               window.localStorage.setItem('username',username);
+               window.location.href="chooseCategory.html";
            }
            else{
                window.alert("Δεν βρέθηκε ο συγκεκριμένος χρήστης...");
@@ -73,3 +74,19 @@ function signButton_click(){
     request.open("GET","https://neatecologicalapp.000webhostapp.com/login.php?username="+username+'&password='+password,true);
     request.send();
 }
+
+
+function signout(){
+    window.localStorage.removeItem('id');
+    window.localStorage.removeItem('username');
+    window.localStorage.removeItem('email');
+    window.localStorage.removeItem('user_type');
+    window.localStorage.removeItem('levels');
+    window.localStorage.removeItem('points');
+    
+}
+
+function setParam(x){
+    window.localStorage.setItem('categ', x);
+}
+
