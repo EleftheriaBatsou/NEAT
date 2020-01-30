@@ -16,8 +16,19 @@ and open the template in the editor.
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     	<link rel="stylesheet" type="text/css" href="css/style.css">
     	<link rel="stylesheet" type="text/css" href="css/completionRate.css">
+        <script>
+            function getCategParam(){
+               var url = window.location.href;
+               var param = url.slice(-1);
+               var result = 'point'+param;
+               document.getElementById('points').innerHTML = window.localStorage.getItem(result)+" %";
+               document.getElementById('levels').innerHTML = window.localStorage.getItem(result)+" level";
+               
+            }
+        </script>
+        
     </head>
-    <body>
+    <body onload="getCategParam()">
     	<div id="completionRateContainer">
     		<!-- Navbar -->
 			<nav class="navbar navbar-expand-lg navbar-light topNavbar">
@@ -39,7 +50,8 @@ and open the template in the editor.
         	<!-- Choose category -->
 			<div class="container-fluid">
 				<div class="completionRateImagePercentage">
-					<div class="completion-rate-percentage-text">68<span class="completion-rate-percentage-symbol">%</span></div>
+					<div id="points" class="completion-rate-percentage-text"><span class="completion-rate-percentage-symbol">%</span></div>
+                                        <div id="levels"></div>
 				</div>
 				<img class="img-fluid completionRateImage" src="images/completionRate.png">
 			</div>

@@ -16,8 +16,44 @@ and open the template in the editor.
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     	<link rel="stylesheet" type="text/css" href="css/style.css">
     	<link rel="stylesheet" type="text/css" href="css/advice.css">
+        
+        <script>
+            function loadheader(){
+                var header = window.localStorage.getItem('header');
+                //window.alert(header);
+               
+
+   
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange= function(){
+       if (this.readyState === 4 && this.status === 200){
+           msg=this.responseText;
+           if(msg ){
+              var arrayresp = msg.toString().split('|');
+              var title = arrayresp[0].toString();
+              var bodytext = arrayresp[1].toString();
+              var fotofirst = arrayresp[2];
+              //window.alert(title+" "+bodytext);
+              document.getElementById('mainbody').innerHTML = title;
+              document.getElementById('mainbody2').innerHTML= bodytext;
+              //document.getElementById('foto1').innerHTML = fotofirst;
+               
+           }
+           else{
+               window.alert("Δεν βρέθηκαν κείμενα...");
+           }
+       }
+    };
+
+    request.open("GET","https://neatecologicalapp.000webhostapp.com/fetcharticle.php?header="+header,true);
+    request.send();
+}
+               
+        </script>
+        
     </head>
-    <body>
+    <body onload="loadheader();">
     	<div id="adviceContainer">
     		<!-- Navbar -->
 			<nav class="navbar navbar-expand-lg navbar-light topNavbar">
@@ -44,10 +80,10 @@ and open the template in the editor.
 
 				<div class="row">
 					<div class="col-12 advice-description">
-						<div>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Integer fermentum, quam id condimentum malesuada, odio nunc viverra lacus, nec tincidunt ex tortor id tortor. Suspendisse potenti.
+						<div id="mainbody">
+							
 						</div>
+                                            <div id="foto1" style="max-width: 100%"></div>
 					</div>
 				</div>
 
@@ -56,9 +92,8 @@ and open the template in the editor.
 						<img src="">
 					</div>
 					<div class="col-6 advice-description">
-						<div>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Integer fermentum, quam id condimentum malesuada, odio nunc viverra lacus, nec tincidunt ex tortor id tortor. Suspendisse potenti.
+						<div id="mainbody2">
+							  
 						</div>
 					</div>
 				</div>
