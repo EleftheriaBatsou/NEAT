@@ -81,8 +81,14 @@ function signout(){
     window.localStorage.removeItem('username');
     window.localStorage.removeItem('email');
     window.localStorage.removeItem('user_type');
-    window.localStorage.removeItem('levels');
-    window.localStorage.removeItem('points');
+    window.localStorage.removeItem('level1');
+    window.localStorage.removeItem('point1');
+     window.localStorage.removeItem('level2');
+    window.localStorage.removeItem('point2');
+     window.localStorage.removeItem('level3');
+    window.localStorage.removeItem('point3');
+     window.localStorage.removeItem('level4');
+    window.localStorage.removeItem('point4');
     
 }
 
