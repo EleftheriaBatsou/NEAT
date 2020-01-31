@@ -55,7 +55,7 @@ and open the template in the editor.
 				    	
 				    	<div class="rectangular">
 				    		<span><i class="fa fa-cog"></i>my fingerprint</span>
-                                                <span ></span><span></span>
+							<span ></span><span></span>
 				    	</div>
 					</div>
 				</div>
@@ -94,11 +94,11 @@ and open the template in the editor.
 
 	        <!-- Footer -->
 	        <nav class="navbar fixed-bottom bottomNavbar">
-			  <a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_2.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_3.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_4.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_5.png"></a>
+				<a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(3);"><img src="images/simataki_2.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(2);"><img src="images/simataki_3.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(4);"><img src="images/simataki_4.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(1);"><img src="images/simataki_5.png"></a>
 			</nav>
 
 		</div>
@@ -108,11 +108,9 @@ and open the template in the editor.
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script>
-                    document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
-                document.getElementById("profileUsername").innerHTML=window.localStorage.getItem('username');
-                document.getElementById("profileEmail").innerHTML= window.localStorage.getItem('email');
-                
-
+	document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
+	document.getElementById("profileUsername").innerHTML=window.localStorage.getItem('username');
+	document.getElementById("profileEmail").innerHTML= window.localStorage.getItem('email');
 </script>	
     </body>
 </html>

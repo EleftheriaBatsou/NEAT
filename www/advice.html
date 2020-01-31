@@ -20,35 +20,29 @@ and open the template in the editor.
         <script>
             function loadheader(){
                 var header = window.localStorage.getItem('header');
-                //window.alert(header);
-               
 
-   
+				var request = new XMLHttpRequest();
+				request.onreadystatechange= function(){
+				   if (this.readyState === 4 && this.status === 200){
+					   msg=this.responseText;
+					   if(msg ){
+						  var arrayresp = msg.toString().split('|');
+						  var title = arrayresp[0].toString();
+						  var bodytext = arrayresp[1].toString();
+						  var fotofirst = arrayresp[2];
+						  document.getElementById('mainbody').innerHTML = title;
+						  document.getElementById('mainbody2').innerHTML= bodytext;
+						  //document.getElementById('foto1').innerHTML = fotofirst;
+					   }
+					   else{
+						   window.alert("Δεν βρέθηκαν κείμενα...");
+					   }
+				   }
+				};
 
-    var request = new XMLHttpRequest();
-    request.onreadystatechange= function(){
-       if (this.readyState === 4 && this.status === 200){
-           msg=this.responseText;
-           if(msg ){
-              var arrayresp = msg.toString().split('|');
-              var title = arrayresp[0].toString();
-              var bodytext = arrayresp[1].toString();
-              var fotofirst = arrayresp[2];
-              //window.alert(title+" "+bodytext);
-              document.getElementById('mainbody').innerHTML = title;
-              document.getElementById('mainbody2').innerHTML= bodytext;
-              //document.getElementById('foto1').innerHTML = fotofirst;
-               
-           }
-           else{
-               window.alert("Δεν βρέθηκαν κείμενα...");
-           }
-       }
-    };
-
-    request.open("GET","https://neatecologicalapp.000webhostapp.com/fetcharticle.php?header="+header,true);
-    request.send();
-}
+				request.open("GET","https://neatecologicalapp.000webhostapp.com/fetcharticle.php?header="+header,true);
+				request.send();
+			}
                
         </script>
         
@@ -80,10 +74,8 @@ and open the template in the editor.
 
 				<div class="row">
 					<div class="col-12 advice-description">
-						<div id="mainbody">
-							
-						</div>
-                                            <div id="foto1" style="max-width: 100%"></div>
+						<div id="mainbody"></div><br>
+						<div id="mainbody2"></div>
 					</div>
 				</div>
 
@@ -91,22 +83,17 @@ and open the template in the editor.
 					<div class="col-6 advice-image">
 						<img src="">
 					</div>
-					<div class="col-6 advice-description">
-						<div id="mainbody2">
-							  
-						</div>
-					</div>
 				</div>
 			</div>
 			
 
 	        <!-- Footer -->
 	        <nav class="navbar fixed-bottom bottomNavbar">
-			  <a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_2.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_3.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_4.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_5.png"></a>
+				<a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(3);"><img src="images/simataki_2.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(2);"><img src="images/simataki_3.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(4);"><img src="images/simataki_4.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(1);"><img src="images/simataki_5.png"></a>
 			</nav>
 
 		</div>

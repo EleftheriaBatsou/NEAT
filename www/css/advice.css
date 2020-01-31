@@ -40,3 +40,7 @@
 .navbar-light .navbar-nav .nav-link {
     color: #4d6f50;
 }
+
+#mainbody {
+    font-weight: 500;
+}

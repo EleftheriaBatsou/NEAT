@@ -24,11 +24,11 @@
 
 .choose-advice-list-item {
     color: #333;
-    font-size: 20px;
+    font-size: 16px;
     width: 100%;
     display: block;
     background-color: #95d99b;
-    padding: 15px 20px;
+    padding: 15px 50px 15px 20px;
     position: relative;
     text-transform: capitalize;
     margin-bottom: 7px;
@@ -52,9 +52,9 @@
 .choose-advice-arrow-icon {
     position: absolute;
     right: 20px;
-    top: 16px;
-    width: 30px;
-    height: 30px;
+    top: 14px;
+    width: 26px;
+    height: 26px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;

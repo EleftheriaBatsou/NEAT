@@ -22,8 +22,6 @@ and open the template in the editor.
                var param = url.slice(-1);
                var result = 'point'+param;
                document.getElementById('points').innerHTML = window.localStorage.getItem(result)+" %";
-               document.getElementById('levels').innerHTML = window.localStorage.getItem(result)+" level";
-               
             }
         </script>
         
@@ -51,18 +49,17 @@ and open the template in the editor.
 			<div class="container-fluid">
 				<div class="completionRateImagePercentage">
 					<div id="points" class="completion-rate-percentage-text"><span class="completion-rate-percentage-symbol">%</span></div>
-                                        <div id="levels"></div>
 				</div>
 				<img class="img-fluid completionRateImage" src="images/completionRate.png">
 			</div>
 
 	        <!-- Footer -->
 	        <nav class="navbar fixed-bottom bottomNavbar">
-			  <a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_2.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_3.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_4.png"></a><span>|</span>
-			  <a href="chooseAdvice.html"><img src="images/simataki_5.png"></a>
+				<a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(3);"><img src="images/simataki_2.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(2);"><img src="images/simataki_3.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(4);"><img src="images/simataki_4.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(1);"><img src="images/simataki_5.png"></a>
 			</nav>
 
 		</div>
