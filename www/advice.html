@@ -21,11 +21,34 @@ and open the template in the editor.
             function loadheader(){
                 var header = window.localStorage.getItem('header');
 
+                var adviceMainImage,
+                    categoryId = window.localStorage.getItem('categ');
+
+
+                switch(categoryId) {
+                    case '1':
+                        adviceMainImage = 'images/anakiklosi-bg.png';
+                        break;
+                    case '2':
+                        adviceMainImage = 'images/meiosi-ripon-bg.jpg';
+                        break;
+                    case '3':
+                        adviceMainImage = 'images/prasines-drastiriotites-bg.jpg';
+                        break;
+                    case '4':
+                        adviceMainImage = 'images/oikologika-proionta-bg.jpg';
+                        break;
+                    default:
+                        adviceMainImage = 'images/meiosi-ripon-bg.jpg';
+                }
+
+                document.getElementById("adviceBgImage").src = adviceMainImage;
+
 				var request = new XMLHttpRequest();
 				request.onreadystatechange= function(){
 				   if (this.readyState === 4 && this.status === 200){
-					   msg=this.responseText;
-					   if(msg ){
+					   msg = this.responseText;
+					   if(msg){
 						  var arrayresp = msg.toString().split('|');
 						  var title = arrayresp[0].toString();
 						  var bodytext = arrayresp[1].toString();
@@ -43,7 +66,6 @@ and open the template in the editor.
 				request.open("GET","https://neatecologicalapp.000webhostapp.com/fetcharticle.php?header="+header,true);
 				request.send();
 			}
-               
         </script>
         
     </head>
@@ -70,7 +92,7 @@ and open the template in the editor.
 
 			<!-- Choose advice -->
 			<div class="container-fluid">
-				<img class="img-fluid advice-bg-image" src="images/advice-bg.png">
+				<img class="img-fluid advice-bg-image" src="//:0" id="adviceBgImage">
 
 				<div class="row">
 					<div class="col-12 advice-description">
@@ -91,8 +113,8 @@ and open the template in the editor.
 	        <nav class="navbar fixed-bottom bottomNavbar">
 				<a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
 				<a href="chooseAdvice.html" onclick="setParam(3);"><img src="images/simataki_2.png"></a><span>|</span>
-				<a href="chooseAdvice.html" onclick="setParam(2);"><img src="images/simataki_3.png"></a><span>|</span>
-				<a href="chooseAdvice.html" onclick="setParam(4);"><img src="images/simataki_4.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(2);"><img src="images/simataki_4.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(4);"><img src="images/simataki_3.png"></a><span>|</span>
 				<a href="chooseAdvice.html" onclick="setParam(1);"><img src="images/simataki_5.png"></a>
 			</nav>
 
@@ -102,8 +124,9 @@ and open the template in the editor.
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script>
-                    document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
-                </script>	
+
+		<script>
+			document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
+		</script>
     </body>
 </html>

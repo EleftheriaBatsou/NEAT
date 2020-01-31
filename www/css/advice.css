@@ -44,3 +44,8 @@
 #mainbody {
     font-weight: 500;
 }
+
+#mainbody2 a {
+    word-wrap: break-word;
+    display: block;
+}

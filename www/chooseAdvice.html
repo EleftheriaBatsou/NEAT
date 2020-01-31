@@ -20,48 +20,40 @@ and open the template in the editor.
         <script>
             function loaddatasets(){
                 var param = window.localStorage.getItem('categ');
-                
-               
+				var request = new XMLHttpRequest();
+				request.onreadystatechange= function(){
+				   if (this.readyState === 4 && this.status === 200){
+					   msg=this.responseText;
+					   if(msg ){
+						   var right =  document.getElementById('righthere');
+						  var arrayresp = msg.toString().split('|');
+						  for(i=0;i<arrayresp.length-1;i++){
+							  node = document.createElement("a");
+							  node2 = document.createTextNode(arrayresp[i]);
+							  window.localStorage.setItem('header',node2.textContent);
+							  node.setAttribute('href','advice.html');
+							  node.onclick=function(){window.localStorage.setItem('header',this.textContent);}
+							  node.className='choose-advice-list-item';
+							  node.appendChild(node2);
+							  node3 = document.createElement('span');
+							  node3.className='choose-advice-arrow-icon';
+							  node4 = document.createElement('i');
+							  node4.className='fa fa-angle-right';
+							  node3.appendChild(node4);
+							  node.appendChild(node3);
 
-   
+							  right.appendChild(node);
+						  }
+					   }
+					   else{
+						   window.alert("Δεν βρέθηκαν συμβουλές...");
+					   }
+				   }
+				};
 
-    var request = new XMLHttpRequest();
-    request.onreadystatechange= function(){
-       if (this.readyState === 4 && this.status === 200){
-           msg=this.responseText;
-           if(msg ){
-               var right =  document.getElementById('righthere');
-              var arrayresp = msg.toString().split('|');
-              for(i=0;i<arrayresp.length-1;i++){
-              node = document.createElement("a");
-              node2 = document.createTextNode(arrayresp[i]);
-              window.localStorage.setItem('header',node2.textContent);
-              node.setAttribute('href','advice.html');
-              node.onclick=function(){window.localStorage.setItem('header',this.textContent);}
-              node.className='choose-advice-list-item';
-              node.appendChild(node2);
-              node3 = document.createElement('span');
-              node3.className='choose-advice-arrow-icon';
-              node4 = document.createElement('i');
-              node4.className='fa fa-angle-right';
-              node3.appendChild(node4);
-              node.appendChild(node3);
-              
-              right.appendChild(node);
-          }
-          
-         
-               
-           }
-           else{
-               window.alert("Δεν βρέθηκαν συμβουλές...");
-           }
-       }
-    };
-
-    request.open("GET","https://neatecologicalapp.000webhostapp.com/fetchheader.php?param="+param,true);
-    request.send();
-}
+				request.open("GET","https://neatecologicalapp.000webhostapp.com/fetchheader.php?param="+param,true);
+				request.send();
+			}
                 
             
         </script>
@@ -90,52 +82,7 @@ and open the template in the editor.
         	<!-- Choose advice -->
 			<div class="container-fluid">
 				<div class="row">
-					<div id="righthere" class="choose-advice-list col-12">
-						<!--<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-                                            
-                                            
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-						<a class="choose-advice-list-item" href="advice.html">
-							<span class="choose-advice-fake-icon"></span>
-							<span>Lorem ipsum</span>
-							<span class="choose-advice-arrow-icon"><i class="fa fa-angle-right"></i></span>
-						</a>
-                                            
-                                            -->
-					</div>
+					<div id="righthere" class="choose-advice-list col-12"></div>
 				</div>
 			</div>
 			
@@ -144,8 +91,8 @@ and open the template in the editor.
 	        <nav class="navbar fixed-bottom bottomNavbar">
 				<a href="chooseCategory.html"><img src="images/simataki_1.png"></a><span>|</span>
 				<a href="chooseAdvice.html" onclick="setParam(3);"><img src="images/simataki_2.png"></a><span>|</span>
-				<a href="chooseAdvice.html" onclick="setParam(2);"><img src="images/simataki_3.png"></a><span>|</span>
-				<a href="chooseAdvice.html" onclick="setParam(4);"><img src="images/simataki_4.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(2);"><img src="images/simataki_4.png"></a><span>|</span>
+				<a href="chooseAdvice.html" onclick="setParam(4);"><img src="images/simataki_3.png"></a><span>|</span>
 				<a href="chooseAdvice.html" onclick="setParam(1);"><img src="images/simataki_5.png"></a>
 			</nav>
 
@@ -155,9 +102,9 @@ and open the template in the editor.
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script>
-                    document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
-                </script>	
-    
+
+		<script>
+			document.getElementById("usernameCategory").innerHTML= window.localStorage.getItem('username');
+		</script>
     </body>
 </html>
